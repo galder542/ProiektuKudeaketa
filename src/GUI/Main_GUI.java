@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -62,7 +63,7 @@ public class Main_GUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				org.sudoku.sftwring.SarrerakoLehioa.main(null);
-				
+				frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 			}
 		});
 		

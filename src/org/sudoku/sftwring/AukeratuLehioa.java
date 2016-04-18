@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
+import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -93,6 +94,15 @@ public class AukeratuLehioa extends JFrame {
 
 		infoPanel = new JPanel();
 		
+		JButton btreturn = new JButton("Menu nagusia");
+		btreturn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+				GUI.Main_GUI.main(null);
+			}
+		});
+		btreturn.setFont(new Font("EHUSerif", Font.BOLD, 16));
+		
 		JButton btnKlask = new JButton("Klasifikazioa");
 		btnKlask.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -117,12 +127,14 @@ public class AukeratuLehioa extends JFrame {
 								.addComponent(infoPanel, GroupLayout.PREFERRED_SIZE, 277, GroupLayout.PREFERRED_SIZE)))
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(btreturn)
 							.addComponent(btnKlask)))
 					.addContainerGap())
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
+					.addComponent(btreturn)
 					.addComponent(btnKlask)
 					.addGap(29)
 					.addComponent(infoPanel, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)

@@ -63,7 +63,7 @@ public class Main_GUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				org.sudoku.sftwring.SarrerakoLehioa.main(null);
-				frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+				
 			}
 		});
 		

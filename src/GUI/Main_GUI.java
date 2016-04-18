@@ -61,7 +61,7 @@ public class Main_GUI extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				org.sudoku.sftwring.SarrerakoLehioa.main(null);
 				
 			}
 		});
